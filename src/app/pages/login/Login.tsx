@@ -1,11 +1,10 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 
 export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const emailLength = useMemo(() => {
-        console.log('executou')
         return email.length * 1000;
     }, [email.length]);
 
