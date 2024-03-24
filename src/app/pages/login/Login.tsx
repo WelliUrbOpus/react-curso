@@ -1,8 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    useEffect(() => {
+       
+    }, []);
+
+    useEffect(() => {
+        console.log(email);
+    }, [email]);
+
+    useEffect(() => {
+        console.log(password);
+    }, [password]);
 
     const handleEntrar = () => {
         console.log(email);
@@ -11,7 +23,7 @@ export const Login = () => {
 
     return (
         <div>
-            <form action="action">
+            <form>
                 <label>
                     <span>Email</span>
                     <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
