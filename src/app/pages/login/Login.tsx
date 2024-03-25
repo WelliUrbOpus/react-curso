@@ -2,9 +2,12 @@ import { useState, useMemo, useCallback, useRef } from 'react';
 
 import { InputLogin } from './components/InputLogin';
 import { ButtonLogin } from './components/ButtonLogin';
+import { useUsuarioLogado } from '../../shared/hooks';
 
 export const Login = () => {
     const inputPasswordRef = useRef<HTMLInputElement>(null)
+    const { nomeDoUsuario } = useUsuarioLogado();
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -21,6 +24,7 @@ export const Login = () => {
         <div>
             <form>
                 <p>Quantidade de caractere no email: {emailLength}</p>
+                <p>{nomeDoUsuario}</p>
 
                 <InputLogin
                     label='Email'
