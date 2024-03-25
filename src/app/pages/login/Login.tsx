@@ -4,7 +4,6 @@ import { InputLogin } from './components/InputLogin';
 
 export const Login = () => {
     const inputPasswordRef = useRef<HTMLInputElement>(null)
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -24,7 +23,6 @@ export const Login = () => {
 
                 <InputLogin
                     label='Email'
-                    type='email'
                     value={email}
                     onChange={newValue => setEmail(newValue)}
                     onPressEnter={() => inputPasswordRef.current?.focus()}
@@ -34,9 +32,10 @@ export const Login = () => {
                     label='Password'
                     type='password'
                     value={password}
+                    ref={inputPasswordRef}
                     onChange={newValue => setPassword(newValue)}
                 />
-
+                
                 {/*<label>
                     <span>Password</span>
                     <input
@@ -48,6 +47,8 @@ export const Login = () => {
     </label>*/}
 
                 <button onClick={handleEntrar} type="button">Entrar</button>
+
+
             </form>
         </div>
     );
