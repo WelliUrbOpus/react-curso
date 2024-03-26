@@ -3,9 +3,9 @@ import { ApiException } from "../ApiException";
 
 
 export interface ITarefa {
-    id: number;
     title: string;
     isCompleted: boolean;
+    id?: number;
 }
 
 const getAll = async (): Promise<ITarefa[] | ApiException> => {
@@ -36,7 +36,7 @@ const getById = async (id: number): Promise<ITarefa[] | ApiException> => {
 
 };
 
-const create = async (dataToCreate: Omit<ITarefa, 'id'>): Promise<ITarefa[] | ApiException> => {
+const create = async (dataToCreate:ITarefa): Promise<ITarefa[] | ApiException> => {
 
     try {
 
