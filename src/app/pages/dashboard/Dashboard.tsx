@@ -36,7 +36,6 @@ export const Dashboard = () => {
             <ul>
                 {lista.map((listItem, index) => {
                     return <li key={index}>
-
                         <input
                             type="checkbox"
                             checked={listItem.isSelected}

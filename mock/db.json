@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "author": "type"
+    },
+    {
+      "id": "b5f0",
+      "title": "teste",
+      "author": "Welli"
+    },
+    {
+      "id": "9712",
+      "title": "teste",
+      "author": "Welli"
+    },
+    {
+      "id": "2",
+      "title": "teste",
+      "author": "Welli"
+    },
+    {
+      "id": "2",
+      "title": "teste",
+      "author": "Welli"
+    },
+    {
+      "id": "aef3",
+      "title": "teste",
+      "author": "Welli"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
